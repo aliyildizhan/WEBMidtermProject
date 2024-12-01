@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+    margin: 0;
+    background-color: rgb(230, 230, 230);
+}
+
+header {
+    background-color: rgb(46, 144, 213);
+    padding: 1em 0;
+    text-align: center;
+}
+
+/* Division Styles */
+div {
+    background: white;
+    margin-bottom: 1.5em;
+    padding: 1em;
+}
+
+div h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-wrap:wrap;
+}
+
+form label {
+    text-align: center;
+    flex-basis: 150px;
+    font-weight: bold;
+}
+
+form input, form select, form button {
+    flex-grow: 1;
+    flex-basis: 300px;
+    padding: 0.5em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    margin-right: 0.5em;
+}
+
+form button {
+    background: rgb(46, 144, 213);
+    border: 0px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: rgb(31, 107, 161);
+}
+
+/* Table Styles */
+#results-table {
+    width: 100%;
+}
+
+#results-table th,
+#results-table td {
+    padding: 0.75rem;
+}
+
+#results-table th {
+    background: rgb(46, 144, 213);
+    cursor: pointer;
+}
+
+
+button {
+    cursor: pointer;
+}

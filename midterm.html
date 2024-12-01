@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href ="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Student Management System</h1>
+    </header>
+    <!--Course Addition Section-->
+    <div>
+    <h2>Add Course</h2>
+        <form id="course-form">
+
+            <label for="course-name">Course Name:</label>
+            <input type="text" id="course-name" name="course-name" required>
+
+            <label for="grading-scale">Grading Scale:</label>
+            <select id="grading-scale" name="grading-scale">
+                <option value="10">10 Point Scale</option>
+                <option value="7">7 Point Scale</option>
+            </select>
+            <button type="submit">Add Course</button>
+        </form>
+    </div>
+    
+    <!--Student Addition Section-->
+    <div id="add-student">
+        <h2>Add Student</h2>
+        <form id="student-form">
+
+            <label for="course-select">Select Course:</label>
+            <select id="course-select" name="course-select" required>
+                <option value="">Select a Course</option>
+            </select>
+
+            <label for="student-id">Student ID:</label>
+            <input type="text" min="0" id="student-id" name="student-id" required>
+
+            <label for="student-name">Name:</label>
+            <input type="text" id="student-name" name="student-name" required>
+
+            <label for="student-surname">Surname:</label>
+            <input type="text" id="student-surname" name="student-surname" required>
+
+            <label for="midterm-score">Midterm Score:</label>
+            <input type="number" min="0" max="100" id="midterm-score" name="midterm-score" required>
+
+            <label for="final-score">Final Score:</label>
+            <input type="number" min="0" max="100" id="final-score" name="final-score" required>
+
+            <button type="submit">Add Student</button>
+        </form>
+    </div>
+
+    <!--Showing Result Section-->
+    <div id="results">
+        <h2>Course Results</h2>
+        <label for="course-results-select">Select a Course:</label>
+        <select id="course-results-select">
+            <option value="">Select a Course</option>
+        </select>
+        <button type="click" id="course-delete-button">Delete This Course</button>
+        <input type="text" id="search-input" onkeyup="searchStudents()" placeholder="Search for names">
+
+        <table id="results-table">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Student ID</th>
+                    <th onclick="sortTable(1)">Name</th>
+                    <th onclick="sortTable(2)">Surname</th>
+                    <th onclick="sortTable(3)">Midterm</th>
+                    <th onclick="sortTable(4)">Final</th>
+                    <th onclick="sortTable(5)">Grade</th>
+                    <th onclick="sortTable(6)">Letter Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button type="button" id="view-stats-button">View Course Statistics</button>
+    </div>
+
+</body>
+</html>
